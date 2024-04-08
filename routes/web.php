@@ -14,5 +14,5 @@ use App\Http\Controllers\UserController;
 |
 */
 Route::get('/', [UserController::class, 'index'])->name('user.index');
-
 Route::get('/contacts', [UserController::class, 'contacts'])->name('user.contacts');
+Route::get('/references', [UserController::class, 'references'])->name('user.references');

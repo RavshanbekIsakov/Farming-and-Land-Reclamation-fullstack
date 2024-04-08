@@ -15,4 +15,9 @@ class UserController extends Controller
     {
         return view('user.contacts');
     }
+
+    public function references()
+    {
+        return view('user.references');
+    }
 }

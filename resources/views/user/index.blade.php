@@ -145,11 +145,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="references.html" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.references') }}" class="service-image-link w-inline-block">
                                             <img alt="image" src="images/ref.jpg" sizes="(max-width: 479px) 94vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/ref.jpg 500w, images/ref.jpg 657w" class="service-image three">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="references.html" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.references') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Adabiyotlar</h3>
                                             </a>
                                         </div>
