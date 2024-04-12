@@ -64,6 +64,23 @@
                                 </form>
                             </div>
                         </div>
+{{--                        <div class="card">--}}
+{{--                            <div class="card-header">--}}
+{{--                                <h5 class="card-title mb-0">Rasm va Ism Sharifni yangilash</h5>--}}
+{{--                            </div>--}}
+{{--                            <div class="card-body h-100">--}}
+{{--                                <form action="{{ route('admin.update.photo') }}" method="post">--}}
+{{--                                    @csrf--}}
+{{--                                    <div class="mb-3">--}}
+{{--                                        <label class="form-label">Yangi rasm</label>--}}
+{{--                                        <input required name="photo" type="file" class="form-control" placeholder="">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="text-end">--}}
+{{--                                        <button type="submit" class="btn btn-primary">Yangilash</button>--}}
+{{--                                    </div>--}}
+{{--                                </form>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
 
                 </div>

@@ -50,24 +50,5 @@ class AdminController extends Controller
         }
     }
 
-    public function updatePhoto(Request $request)
-    {
-        $request->validate([
-            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Example validation rules
-        ]);
-
-        $photo = $request->file('photo');
-
-        $filename = time() . '.' . $photo->getClientOriginalExtension();
-
-        $photo->storeAs('public/images', $filename);
-
-        $admin = Auth::guard('admin')->user();
-
-        $admin->photo = $filename;
-        $admin->save();
-
-        return redirect()->back()->with('success', 'Photo updated successfully');
-    }
 
 }

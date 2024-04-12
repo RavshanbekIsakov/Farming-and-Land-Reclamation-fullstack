@@ -27,5 +27,8 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('logout', [AdminController::class, 'logout'])->name('admin.logout');
         Route::view('profile','admin.profile')->name('admin.profile');
         Route::post('profile',[AdminController::class, 'update_password'])->name('admin.password.update');
+        Route::post('/admin/update-photo', 'AdminController@updatePhoto')->name('admin.update.photo');
     });
 });
+
+

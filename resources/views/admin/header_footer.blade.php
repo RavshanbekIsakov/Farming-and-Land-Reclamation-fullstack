@@ -49,12 +49,6 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item @yield('companies')" >
-                    <a class="sidebar-link" href="">
-                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Hamkor korxonalar</span>
-                    </a>
-                </li>
-
                 <li class="sidebar-item @yield('projects')">
                     <a class="sidebar-link" href="">
                         <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Loyihalar</span>
