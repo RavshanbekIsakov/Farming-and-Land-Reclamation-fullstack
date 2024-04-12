@@ -11,11 +11,11 @@
     <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+    <link rel="shortcut icon" href="{{ asset('../images/6542310a58d708c996186d62_32.png') }}" />
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
 
-    <title>GoldApps-admin</title>
+    <title>DvM.uz Admin</title>
 
     <link href="css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
                     <div class="text-center mt-4">
                         <h1 class="h2">Qaytganingiz bilan janob!</h1>
                         <p class="lead">
-                            GoldApps LLC IT outsource kompaniyasining vebsayti admin qismi.
+                            Dehqonchilik va Melioratsiya fani elektron darsligi admin qismi.
                         </p>
                     </div>
 

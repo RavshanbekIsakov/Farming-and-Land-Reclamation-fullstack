@@ -10,11 +10,11 @@
     <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="{{ asset('images/6542310a58d708c996186d62_32.png') }}"/>
+    <link rel="shortcut icon" href="{{ asset('../images/6542310a58d708c996186d62_32.png') }}"/>
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-    <title>GoldApps.uz</title>
+    <title>DvM.uz</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -93,7 +93,7 @@
                         </a>
 
                         <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                            <img src="{{ asset('/images/ravshan2.jpg') }}" class="avatar img-fluid rounded me-1" alt="user-photo" />
+                            <img src="{{ session('photo') }}" class="avatar img-fluid rounded me-1" alt="user-photo" />
                             <span class="text-dark">{{ session('fullname') }}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
