@@ -20,6 +20,7 @@ class AdminController extends Controller
                 session()->put('admin',1);
                 session()->put('id',$admin->id);
                 session()->put('fullname',$admin->fullname);
+                session()->put('photo',$admin->photo);
                 return redirect()->route('admin.profile');
             }
             else{
@@ -42,7 +43,7 @@ class AdminController extends Controller
         }
         else{
             $p = Hash::make($request->password1);
-            $admin = admins::find(session('id'));
+            $admin = Admin::find(session('id'));
             $admin->password = $p;
             $admin->save();
             return back()->with('success',1);

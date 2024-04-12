@@ -18,10 +18,9 @@
                             <h5 class="card-title mb-0">Profil malumotlari</h5>
                         </div>
                         <div class="card-body text-center">
-                            <img src="{{ asset('images/ravshan2.jpg') }}" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128">
+                            <img src="{{ asset('images/'. session('photo')) }}" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128">
                             <h5 class="card-title mb-0">Admin</h5>
                             <div class="text-muted mb-2">Muallif</div>
-
                             <div>
                                 <a class="btn btn-primary btn-sm" href="#">Follow</a>
                                 <a class="btn btn-primary btn-sm" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Message</a>
