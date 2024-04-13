@@ -28,6 +28,11 @@ Route::prefix('admin')->group(callback: function () {
         Route::view('profile','admin.profile')->name('admin.profile');
         Route::post('profile',[AdminController::class, 'update_password'])->name('admin.password.update');
         Route::post('/admin/update-photo', 'AdminController@updatePhoto')->name('admin.update.photo');
+
+        Route::get('articles', [AdminController::class, 'articles'])->name('admin.view.articles');
+        Route::post('add-articles', [AdminController::class, 'add_articles'])->name('admin.add.article');
+        Route::delete('delete-article', [AdminController::class, 'delete_articles'])->name('admin.delete.article');
+
     });
 });
 

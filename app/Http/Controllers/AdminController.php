@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Articles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -50,5 +51,53 @@ class AdminController extends Controller
         }
     }
 
+
+    public function articles(){
+        $articles = Articles::get();
+        return view('admin.articles', ['articles' => $articles]);
+    }
+
+    public function add_articles(Request $request){
+//        dd($request);
+        $request->validate([
+            'image' => 'required|image|max:2048',
+            'name' => 'required|string',
+            'file' => 'required|file'
+        ]);
+        $org_name = $request->file('image')->getClientOriginalName();
+        $microTime = md5(microtime());
+        $photo_name = $microTime.$org_name;
+        $request->file('image')->move('img/articles/',$photo_name);
+
+        $file_org_name = $request->file('file')->getClientOriginalName();
+        $microTime = md5(microtime());
+        $file_name = $microTime.$file_org_name;
+        $request->file('file')->move('books/',$file_name);
+
+
+
+        $project = new Articles();
+        $project->article_name = $request->name;
+        $project->article_photo = $photo_name;
+        $project->article_file = $file_name;
+        $project->save();
+        if($project->id){
+            return redirect()->back()->with('success',1);
+        }
+        else{
+            return redirect()->back()->with('unsuccessful',1);
+        }
+    }
+
+    public function delete_articles(Request $request){
+        $request->validate([
+            'id' => 'required|numeric'
+        ]);
+        $article = Articles::find($request->id);
+        unlink('img/articles/'.$article->article_photo);
+        unlink('books/'.$article->article_file);
+        Articles::where('id',$request->id)->delete();
+        return redirect()->back()->with('delete',1);
+    }
 
 }

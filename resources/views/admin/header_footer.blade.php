@@ -49,13 +49,13 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item @yield('projects')">
-                    <a class="sidebar-link" href="">
-                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Loyihalar</span>
-                    </a>
-                </li>
-                <li class="sidebar-item @yield('news')">
-                    <a class="sidebar-link" href="">
+{{--                <li class="sidebar-item @yield('projects')">--}}
+{{--                    <a class="sidebar-link" href="">--}}
+{{--                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Loyihalar</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+                <li class="sidebar-item @yield('articles')">
+                    <a class="sidebar-link" href="{{ route('admin.view.articles') }}">
                         <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Yangi maqolalar</span>
                     </a>
                 </li>
