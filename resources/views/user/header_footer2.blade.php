@@ -123,7 +123,7 @@
                         <a href="/brand-guidelines/changelog" class="footer-link">Taqdimotlar</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="/brand-guidelines/changelog" class="footer-link">Labaratoriya mashg'ulotlari</a>
+                        <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="footer-link">Labaratoriya mashg'ulotlari</a>
                     </li>
                     <li class="footer-list-item">
                         <a href="/brand-guidelines/changelog" class="footer-link">Glossari</a>

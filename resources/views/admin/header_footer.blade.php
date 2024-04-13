@@ -56,7 +56,7 @@
 {{--                </li>--}}
                 <li class="sidebar-item @yield('articles')">
                     <a class="sidebar-link" href="{{ route('admin.view.articles') }}">
-                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Yangi maqolalar</span>
+                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Labaratoriya mashg'ulotlari</span>
                     </a>
                 </li>
                 <li class="sidebar-item @yield('images')">
