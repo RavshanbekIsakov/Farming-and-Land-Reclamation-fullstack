@@ -16,7 +16,7 @@
                     @foreach($amal_mash as $item)
                         <div role="listitem" class="blog-collection-item w-dyn-item">
                             <div class="blog-single-main-block">
-                                <a id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb46-39340b82" href="#" class="blog-image-link w-inline-block">
+                                <a id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb46-39340b82" href="#" style="border: 1px solid black" class="blog-image-link w-inline-block">
                                     <img alt="image" loading="lazy" src="img/practical_trainings/{{ $item->practical_photo }}" sizes="(max-width: 479px) 94vw, (max-width: 767px) 40vw, (max-width: 991px) 41vw, (max-width: 1439px) 20vw, 276.421875px" srcset="img/practical_trainings/{{ $item->practical_photo }} 500w, img/practical_trainings/{{ $item->practical_photo }} 800w, img/practical_trainings/{{ $item->practical_photo }} 1080w, img/practical_trainings/{{ $item->practical_photo }} 1400w" class="blog-image">
                                 </a>
                                 <div id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb48-39340b82" class="blog-info">

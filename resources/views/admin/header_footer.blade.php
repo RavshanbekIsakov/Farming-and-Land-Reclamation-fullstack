@@ -44,16 +44,11 @@
                 </li>
 
                 <li class="sidebar-item @yield('profile')">
-                    <a class="sidebar-link" href="#">
+                    <a class="sidebar-link" href="{{ route('admin.profile') }}">
                         <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil</span>
                     </a>
                 </li>
 
-{{--                <li class="sidebar-item @yield('projects')">--}}
-{{--                    <a class="sidebar-link" href="">--}}
-{{--                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Loyihalar</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
                 <li class="sidebar-item @yield('articles')">
                     <a class="sidebar-link" href="{{ route('admin.view.articles') }}">
                         <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Labaratoriya mashg'ulotlari</span>

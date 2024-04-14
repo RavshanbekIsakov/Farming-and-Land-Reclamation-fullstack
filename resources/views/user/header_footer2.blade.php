@@ -57,19 +57,18 @@
             </a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                 <a href="{{ route('user.index') }}" aria-current="page" class="nav-link w-nav-link w--current">Bosh sahifa</a>
-                <a href="#about-us" class="nav-link w-nav-link">biz haqimizda</a>
                 <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
                     <div class="nav-link w-dropdown-toggle">
                         <div>Bo'limlar</div>
                     </div>
                     <nav class="dropdown-white-list w-dropdown-list">
-                        <a href="/home-2" class="dropdown-link w-dropdown-link">Ma'ruza</a>
+                        <a href="{{ route('user.maruza') }}" class="dropdown-link w-dropdown-link">Ma'ruza</a>
                         <a href="{{ route('user.amaliy_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Amaliy mashg'ulot</a>
                         <a href="#" class="dropdown-link w-dropdown-link">Taqdimotlar</a>
                         <a href="/project" class="dropdown-link w-dropdown-link">Labaratoriya mashg'ulotlari</a>
                         <a href="https://agrilead.webflow.io/project/eco-and-agriculture" class="dropdown-link w-dropdown-link">Glossari</a>
                         <a href="/team" class="dropdown-link w-dropdown-link">Testlar</a>
-                        <a href="https://agrilead.webflow.io/team/arny-wileem" class="dropdown-link w-dropdown-link">Adabiyotlar</a>
+                        <a href="{{ route('user.references') }}" class="dropdown-link w-dropdown-link">Adabiyotlar</a>
                     </nav>
                 </div>
                 <a href="{{ route('user.contacts') }}" class="nav-link w-nav-link">Aloqa</a>
@@ -114,7 +113,7 @@
                         <a href="/brand-guidelines/style-guide" class="footer-link">Test ishlash</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="/brand-guidelines/licenses" class="footer-link">Ma'ruza</a>
+                        <a href="{{ route('user.maruza') }}" class="footer-link">Ma'ruza</a>
                     </li>
                     <li class="footer-list-item">
                         <a href="/brand-guidelines/changelog" class="footer-link">Amaliy mashg'ulot</a>

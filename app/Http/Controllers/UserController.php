@@ -35,4 +35,9 @@ class UserController extends Controller
         return view('user.amaliy_mashgulotlari', ['amal_mash' => $user_amaliy_mash]);
     }
 
+    public function maruza()
+    {
+        return view('user.maruza');
+    }
+
 }

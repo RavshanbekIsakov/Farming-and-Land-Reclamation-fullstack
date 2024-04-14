@@ -1096,6 +1096,11 @@ textarea.w-input, textarea.w-select {
   left: 0;
 }
 
+.section-container {
+    display: flex;
+
+}
+
 .w-widget-twitter-count-shim:not(.w--vertical):before {
   border-width: 4px;
   border-color: rgba(117, 134, 150, 0) #5d6c7b rgba(117, 134, 150, 0) rgba(117, 134, 150, 0);

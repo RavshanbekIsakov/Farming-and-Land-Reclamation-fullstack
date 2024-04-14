@@ -188,14 +188,14 @@
                         <div>Bo'limlar</div>
                     </div>
                     <nav class="dropdown-white-list w-dropdown-list">
-                        <a href="/home-2" class="dropdown-link w-dropdown-link">Ma'ruza</a>
+                        <a href="{{ route('user.maruza') }}" class="dropdown-link w-dropdown-link">Ma'ruza</a>
                         <a href="{{ route('user.amaliy_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Amaliy mashg'ulot</a>
                         <a href="#" class="dropdown-link w-dropdown-link">Taqdimotlar</a>
                         <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Labaratoriya mashg'ulotlari</a>
                         <a href="/project" class="dropdown-link w-dropdown-link">Mustaqil ish</a>
                         <a href="https://agrilead.webflow.io/project/eco-and-agriculture" class="dropdown-link w-dropdown-link">Glossari</a>
                         <a href="/team" class="dropdown-link w-dropdown-link">Testlar</a>
-                        <a href="references.html" class="dropdown-link w-dropdown-link">Adabiyotlar</a>
+                        <a href="{{ route('user.references') }}" class="dropdown-link w-dropdown-link">Adabiyotlar</a>
                     </nav>
                 </div>
                 <a href="{{ route('user.contacts') }}" class="nav-link w-nav-link">Aloqa</a>
