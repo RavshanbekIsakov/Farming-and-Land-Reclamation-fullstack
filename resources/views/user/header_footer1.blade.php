@@ -189,7 +189,7 @@
                     </div>
                     <nav class="dropdown-white-list w-dropdown-list">
                         <a href="/home-2" class="dropdown-link w-dropdown-link">Ma'ruza</a>
-                        <a href="/service" class="dropdown-link w-dropdown-link">Amaliy mashg'ulot</a>
+                        <a href="{{ route('user.amaliy_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Amaliy mashg'ulot</a>
                         <a href="#" class="dropdown-link w-dropdown-link">Taqdimotlar</a>
                         <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Labaratoriya mashg'ulotlari</a>
                         <a href="/project" class="dropdown-link w-dropdown-link">Mustaqil ish</a>

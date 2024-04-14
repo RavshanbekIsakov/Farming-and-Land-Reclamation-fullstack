@@ -59,6 +59,13 @@
                         <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Labaratoriya mashg'ulotlari</span>
                     </a>
                 </li>
+
+                <li class="sidebar-item @yield('practical')">
+                    <a class="sidebar-link" href="{{ route('admin.view.pr_trainings') }}">
+                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Amaliy mashg'ulotlar</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-item @yield('images')">
                     <a class="sidebar-link" href="">
                         <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Images</span>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Articles;
+use App\Models\PracticalTrainings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -97,6 +98,53 @@ class AdminController extends Controller
         unlink('img/articles/'.$article->article_photo);
         unlink('books/'.$article->article_file);
         Articles::where('id',$request->id)->delete();
+        return redirect()->back()->with('delete',1);
+    }
+
+    public function pr_trainings(){
+        $pr_training = PracticalTrainings::get();
+        return view('admin.pr_trainings', ['pr_training' => $pr_training]);
+    }
+
+    public function add_pr_trainings(Request $request){
+        $request->validate([
+            'image' => 'required|image|max:2048',
+            'name' => 'required|string',
+            'file' => 'required|file'
+        ]);
+        $org_name = $request->file('image')->getClientOriginalName();
+        $microTime = md5(microtime());
+        $photo_name = $microTime.$org_name;
+        $request->file('image')->move('img/practical_trainings/',$photo_name);
+
+        $file_org_name = $request->file('file')->getClientOriginalName();
+        $microTime = md5(microtime());
+        $file_name = $microTime.$file_org_name;
+        $request->file('file')->move('books/',$file_name);
+
+
+
+        $pr_train = new PracticalTrainings();
+        $pr_train->practical_name = $request->name;
+        $pr_train->practical_photo = $photo_name;
+        $pr_train->practical_file = $file_name;
+        $pr_train->save();
+        if($pr_train->id){
+            return redirect()->back()->with('success',1);
+        }
+        else{
+            return redirect()->back()->with('unsuccessful',1);
+        }
+    }
+
+    public function delete_pr_trainings(Request $request){
+        $request->validate([
+            'id' => 'required|numeric'
+        ]);
+        $pr_tr = PracticalTrainings::find($request->id);
+        unlink('img/practical_trainings/'.$pr_tr->practical_photo);
+        unlink('books/'.$pr_tr->practical_file);
+        PracticalTrainings::where('id',$request->id)->delete();
         return redirect()->back()->with('delete',1);
     }
 

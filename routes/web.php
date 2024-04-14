@@ -18,6 +18,7 @@ Route::get('/', [UserController::class, 'index'])->name('user.index');
 Route::get('/contacts', [UserController::class, 'contacts'])->name('user.contacts');
 Route::get('/references', [UserController::class, 'references'])->name('user.references');
 Route::get('/lab-mash', [UserController::class, 'lab_mash'])->name('user.labaratoriya_mashgulotlari');
+Route::get('/amaliy-mash', [UserController::class, 'amaliy_mash'])->name('user.amaliy_mashgulotlari');
 
 
 Route::prefix('admin')->group(callback: function () {
@@ -33,6 +34,10 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('articles', [AdminController::class, 'articles'])->name('admin.view.articles');
         Route::post('add-articles', [AdminController::class, 'add_articles'])->name('admin.add.article');
         Route::delete('delete-article', [AdminController::class, 'delete_articles'])->name('admin.delete.article');
+
+        Route::get('pr-trainings', [AdminController::class, 'pr_trainings'])->name('admin.view.pr_trainings');
+        Route::post('add-pr-trainings', [AdminController::class, 'add_pr_trainings'])->name('admin.add.pr_training');
+        Route::delete('delete-pr-trainings', [AdminController::class, 'delete_pr_trainings'])->name('admin.delete.pr_training');
 
     });
 });
