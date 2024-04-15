@@ -3,7 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\LecturesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +38,10 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('pr-trainings', [AdminController::class, 'pr_trainings'])->name('admin.view.pr_trainings');
         Route::post('add-pr-trainings', [AdminController::class, 'add_pr_trainings'])->name('admin.add.pr_training');
         Route::delete('delete-pr-trainings', [AdminController::class, 'delete_pr_trainings'])->name('admin.delete.pr_training');
+
+        Route::get('/lectures', [LecturesController::class, 'lectures'])->name('admin.view.lectures');
+        Route::post('add-lecture', [LecturesController::class, 'add_lectures'])->name('admin.add.lecture');
+        Route::delete('delete-lecture', [LecturesController::class, 'delete_lecture'])->name('admin.delete.lecture');
 
     });
 });

@@ -17,7 +17,7 @@ class LecturesController extends Controller
             'image' => 'required|image|max:2048',
             'name' => 'required|string',
             'file' => 'required|file',
-            'type' => 'required|string'
+            'book_types' => 'required|in:1,2'
         ]);
         $org_name = $request->file('image')->getClientOriginalName();
         $microTime = md5(microtime());
@@ -35,7 +35,7 @@ class LecturesController extends Controller
         $n_lecture->lecture_name = $request->name;
         $n_lecture->lecture_photo = $photo_name;
         $n_lecture->lecture_file = $file_name;
-        $n_lecture->lecture_type = $request->type;
+        $n_lecture->lecture_type = $request->book_types;
         $n_lecture->save();
         if($n_lecture->id){
             return redirect()->back()->with('success',1);

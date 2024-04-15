@@ -61,6 +61,12 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item @yield('lectures')">
+                    <a class="sidebar-link" href="{{ route('admin.view.lectures') }}">
+                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Ma'ruzalar</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-item @yield('images')">
                     <a class="sidebar-link" href="">
                         <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Images</span>
