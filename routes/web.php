@@ -20,6 +20,8 @@ Route::get('/references', [UserController::class, 'references'])->name('user.ref
 Route::get('/lab-mash', [UserController::class, 'lab_mash'])->name('user.labaratoriya_mashgulotlari');
 Route::get('/amaliy-mash', [UserController::class, 'amaliy_mash'])->name('user.amaliy_mashgulotlari');
 Route::get('/maruza-bolimlari', [UserController::class, 'maruza'])->name('user.maruza');
+Route::get('dehqonchilik-maruza', [UserController::class, 'deh_maruza'])->name('user.deh_maruza');
+Route::get('melioratsiya-maruza', [UserController::class, 'mel_maruza'])->name('user.mel_maruza');
 
 Route::prefix('admin')->group(callback: function () {
     Route::view('/', 'admin.login')->name("admin.login");

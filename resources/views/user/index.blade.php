@@ -37,11 +37,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="sections.html" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.maruza') }}" class="service-image-link w-inline-block">
                                             <img alt="image" loading="lazy" src="images/lecture.jpg" sizes="(max-width: 479px) 94vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/lecture.jpg 500w, images/lecture.jpg 657w" class="service-image one">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="sections.html" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.maruza') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Ma'ruzalar</h3>
                                             </a>
                                         </div>

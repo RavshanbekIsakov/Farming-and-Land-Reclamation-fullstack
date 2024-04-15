@@ -16,7 +16,7 @@
                     <div role="listitem" class="blog-collection-item w-dyn-item">
                         <div class="blog-single-main-block">
                             <div id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb48-39340b82" class="blog-info">
-                                <a href="#" class="blog-title-link w-inline-block">
+                                <a href="{{ route('user.deh_maruza') }}" class="blog-title-link w-inline-block">
                                     <h3 class="blog-single-title">Dehqonchilik</h3>
                                 </a>
                             </div>
@@ -27,7 +27,7 @@
                     <div role="listitem" class="blog-collection-item w-dyn-item">
                         <div class="blog-single-main-block">
                             <div id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb46-39340b82" class="blog-info">
-                                <a href="#" class="blog-title-link w-inline-block">
+                                <a href="{{ route('user.mel_maruza') }}" class="blog-title-link w-inline-block">
                                     <h3 class="blog-single-title">Melioratsiya</h3>
                                 </a>
                             </div>

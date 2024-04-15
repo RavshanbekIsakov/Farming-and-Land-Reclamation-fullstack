@@ -29,7 +29,7 @@
                             <tr>
                                 <td>{{ $item->lecture_name }}</td>
                                 <td> {{ $item->lecture_type }}</td>
-                                <td class="w-15"><img src="../img/articles/{{ $item->lecture_photo }}" alt="" class="img-fluid"></td>
+                                <td class="w-15"><img src="../img/lectures/{{ $item->lecture_photo }}" alt="" class="img-fluid"></td>
                                 <td>
                                     <form action="{{ route('admin.delete.lecture') }}" method="post">
                                         @csrf

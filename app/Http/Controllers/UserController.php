@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Articles;
+use App\Models\Lectures;
 use App\Models\PracticalTrainings;
 use Illuminate\Http\Request;
 
@@ -40,4 +41,15 @@ class UserController extends Controller
         return view('user.maruza');
     }
 
+    public function deh_maruza()
+    {
+        $user_deh_maruza = Lectures::where('lecture_type', 1)->get();
+        return view('user.deh_maruza', ['deh_maruza' => $user_deh_maruza]);
+    }
+
+    public function mel_maruza()
+    {
+        $user_mel_maruza = Lectures::where('lecture_type', 2)->get();
+        return view('user.mel_maruza', ['mel_maruza' => $user_mel_maruza]);
+    }
 }
