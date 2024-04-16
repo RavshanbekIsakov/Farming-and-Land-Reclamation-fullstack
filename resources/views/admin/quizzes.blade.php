@@ -24,15 +24,23 @@
                             <th>C javob</th>
                             <th>D javob</th>
                             <th>To'g'ri javob</th>
+                            <th>Savol rasmi</th>
+                            <th>Savol turi</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($articles as $id => $item)
+                        @foreach($quizzes as $id => $item)
                             <tr>
-                                <td>{{ $item->article_name }}</td>
-                                <td class="w-15"><img src="../img/articles/{{ $item->article_photo }}" alt="" class="img-fluid"></td>
+                                <td>{{ $item->questions }}</td>
+                                <td>{{ $item->option_a }}</td>
+                                <td>{{ $item->option_b }}</td>
+                                <td>{{ $item->option_c }}</td>
+                                <td>{{ $item->option_d }}</td>
+                                <td>{{ $item->option_correct }}</td>
+                                <td class="w-15"><img src="../img/quizzes/{{ $item->question_photo }}" alt="" class="img-fluid"></td>
+                                <td>{{ $item->question_type }}</td>
                                 <td>
-                                    <form action="{{ route('admin.delete.article') }}" method="post">
+                                    <form action="{{ route('admin.delete.question') }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <input type="hidden" name="id" value="{{ $item->id }}">
@@ -69,20 +77,42 @@
                             <h5 class="card-title mb-0">Yangi labaratoriya mashg'iloti qo'shish</h5>
                         </div>
                         <div class="card-body h-100">
-                            <form action="{{ route('admin.add.article') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.add.quiz') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="form-label">Fayl nomi <span class="text-danger">*</span></label>
-                                    <input name="name" required type="text" class="form-control" placeholder="">
+                                    <label class="form-label">Savol<span class="text-danger">*</span></label>
+                                    <input name="question" required type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">PDF Fayl <span class="text-danger">*</span></label>
-                                    <input name="file" required type="file" class="form-control" placeholder="" accept="application/pdf">
+                                    <label class="form-label">A javob<span class="text-danger">*</span></label>
+                                    <input name="option_a" required type="text" class="form-control" placeholder="">
                                 </div>
-
                                 <div class="mb-3">
-                                    <label class="form-label">Rasm <span class="text-danger">*</span></label>
-                                    <input name="image" required type="file" class="form-control" placeholder="" accept="image/*">
+                                    <label class="form-label">B javob<span class="text-danger">*</span></label>
+                                    <input name="option_b" required type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">C javob<span class="text-danger">*</span></label>
+                                    <input name="option_c" required type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">D javob<span class="text-danger">*</span></label>
+                                    <input name="option_d" required type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">To'g'ri javob<span class="text-danger">*</span></label>
+                                    <input name="option_correct" required type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Rasm</label>
+                                    <input name="image" type="file" class="form-control" placeholder="" accept="image/*">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Savol turi<span class="text-danger">*</span></label>
+                                    <select id="book_types" required name="quiz_type" class="form-control">
+                                        <option value="1">Dehqonchilik</option>
+                                        <option value="2">Melioratsiya</option>
+                                    </select>
                                 </div>
                                 <div class=" text-end">
                                     <button type="button" class="btn btn-danger cancel">Bekor qilish</button>
