@@ -67,11 +67,12 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item @yield('images')">
-                    <a class="sidebar-link" href="">
-                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Images</span>
+                <li class="sidebar-item @yield('quizzes')">
+                    <a class="sidebar-link" href="{{ route('admin.view.quizzes') }}">
+                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Test yaratish</span>
                     </a>
                 </li>
+
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('admin.logout') }}">
                         <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Chiqish</span>

@@ -2852,8 +2852,8 @@ blockquote {
 }
 
 .project-right-arrow {
-  width: 58px;
-  height: 58px;
+  width: 30px;
+  height: 30px;
   color: var(--white);
   background-color: rgba(255, 255, 255, .05);
   border-radius: 100%;
@@ -2862,7 +2862,7 @@ blockquote {
   top: 0%;
   bottom: 0%;
   left: auto;
-  right: -10%;
+  right: -3%;
 }
 
 .project-right-arrow:hover {
@@ -2895,8 +2895,8 @@ blockquote {
 }
 
 .project-left-arrow {
-  width: 58px;
-  height: 58px;
+  width: 30px;
+  height: 30px;
   color: var(--white);
   background-color: rgba(255, 255, 255, .05);
   border-radius: 100%;
@@ -2904,8 +2904,8 @@ blockquote {
   transition: all .2s;
   top: 0%;
   bottom: 0%;
-  left: -10%;
-  right: auto;
+  left: -3%;
+  /*right: auto;*/
 }
 
 .project-left-arrow:hover {
@@ -5442,6 +5442,7 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 
 @media screen and (max-width: 479px) {
   h1 {

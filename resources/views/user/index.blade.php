@@ -22,7 +22,7 @@
         </div>
     </div>
 </section>
-<section class="section service-section">
+<section class="section service-section section-smaller">
     <div class="w-layout-blockcontainer container w-container">
         <div data-w-id="f261a9bc-359c-d1f6-f558-5e5f72d83b5e" style="opacity:0" class="section-title-block text-center">
             <div class="section-heading-block center">
