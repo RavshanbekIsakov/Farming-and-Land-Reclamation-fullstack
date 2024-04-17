@@ -23,10 +23,15 @@ class QuizController extends Controller
             'option_correct' => 'required|string',
             'quiz_type' => 'required|in:1,2'
         ]);
-        $quiz_org_name = $request->file('image')->getClientOriginalName();
-        $microTime = md5(microtime());
-        $photo_name = $microTime.$quiz_org_name;
-        $request->file('image')->move('img/quizzes/',$photo_name);
+        if ($request->hasFile('image')){
+            $quiz_org_name = $request->file('image')->getClientOriginalName();
+            $microTime = md5(microtime());
+            $photo_name = $microTime.$quiz_org_name;
+            $request->file('image')->move('img/quizzes/',$photo_name);
+        }
+        else{
+            $photo_name = "no_photo";
+        }
 
         $n_quiz = new Quizzes();
         $n_quiz->questions = $request->question;
@@ -35,7 +40,7 @@ class QuizController extends Controller
         $n_quiz->option_b = $request->option_b;
         $n_quiz->option_c = $request->option_c;
         $n_quiz->option_d = $request->option_d;
-        $n_quiz->option_correct = $request->option_a;
+        $n_quiz->option_correct = $request->option_correct;
         $n_quiz->question_type = $request->quiz_type;
         $n_quiz->save();
         if($n_quiz->id){
