@@ -31,11 +31,11 @@ class PresentationController extends Controller
 
 
 
-        $n_pres = new Lectures();
+        $n_pres = new Presentations();
         $n_pres->pres_name = $request->name;
         $n_pres->pres_photo = $photo_name;
         $n_pres->pres_file = $file_name;
-        $n_pres->pres_type = $request->book_types;
+        $n_pres->pres_type = $request->pres_type;
         $n_pres->save();
         if($n_pres->id){
             return redirect()->back()->with('success',1);

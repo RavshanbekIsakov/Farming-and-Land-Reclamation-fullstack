@@ -27,7 +27,7 @@
                         @foreach($articles as $id => $item)
                             <tr>
                                 <td>{{ $item->article_name }}</td>
-                                <td class="w-15"><img src="../img/articles/{{ $item->article_photo }}" alt="" class="img-fluid"></td>
+                                <td class="w-15"><img src="../img/articles/{{ $item->article_photo }}" alt="" class="img-fluid w-50"></td>
                                 <td>
                                     <form action="{{ route('admin.delete.article') }}" method="post">
                                         @csrf

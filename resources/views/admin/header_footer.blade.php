@@ -73,6 +73,12 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item @yield('presentations')">
+                    <a class="sidebar-link" href="{{ route('admin.view.presentations') }}">
+                        <i class="align-middle" data-feather="printer"></i> <span class="align-middle">Prezentatsiya qo'shish</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('admin.logout') }}">
                         <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Chiqish</span>

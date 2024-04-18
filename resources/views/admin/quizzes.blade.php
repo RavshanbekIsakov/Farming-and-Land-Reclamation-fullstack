@@ -37,7 +37,7 @@
                                 <td>{{ $item->option_c }}</td>
                                 <td>{{ $item->option_d }}</td>
                                 <td>{{ $item->option_correct }}</td>
-                                <td class="w-15"><img src="../img/quizzes/{{ $item->question_photo }}" alt="" class="img-fluid"></td>
+                                <td class="w-15"><img src="../img/quizzes/{{ $item->question_photo }}" alt="" class="img-fluid w-50"></td>
                                 <td>{{ $item->question_type }}</td>
                                 <td>
                                     <form action="{{ route('admin.delete.question') }}" method="post">

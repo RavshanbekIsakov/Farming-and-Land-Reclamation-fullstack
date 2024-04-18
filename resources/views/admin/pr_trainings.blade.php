@@ -27,7 +27,7 @@
                         @foreach($pr_training as $id => $item)
                             <tr>
                                 <td>{{ $item->practical_name }}</td>
-                                <td class="w-15"><img src="../img/practical_trainings/{{ $item->practical_photo }}" alt="" class="img-fluid"></td>
+                                <td class="w-15"><img src="../img/practical_trainings/{{ $item->practical_photo }}" alt="" class="img-fluid w-50"></td>
                                 <td>
                                     <form action="{{ route('admin.delete.pr_training') }}" method="post">
                                         @csrf
