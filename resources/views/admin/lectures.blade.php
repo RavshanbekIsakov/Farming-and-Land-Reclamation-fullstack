@@ -31,7 +31,7 @@
                                 <td> {{ $item->lecture_type }}</td>
                                 <td class="w-15"><img src="../img/lectures/{{ $item->lecture_photo }}" alt="" class="img-fluid w-50"></td>
                                 <td>
-                                    <form action="{{ route('admin.delete.lectures') }}" method="post">
+                                    <form action="{{ route('admin.delete.lecture') }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <input type="hidden" name="id" value="{{ $item->id }}">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Articles;
 use App\Models\Lectures;
 use App\Models\PracticalTrainings;
+use App\Models\Presentations;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -52,4 +53,11 @@ class UserController extends Controller
         $user_mel_maruza = Lectures::where('lecture_type', 2)->get();
         return view('user.mel_maruza', ['mel_maruza' => $user_mel_maruza]);
     }
+
+    public function presentatsiya()
+    {
+        $user_presentation = Presentations::paginate(4);
+        return view('user.prezentatsiyalar', ['presentation' => $user_presentation]);
+    }
+
 }

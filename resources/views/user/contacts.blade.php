@@ -4,7 +4,7 @@
     <section class="section breadcrumb-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="breadcrumb-info-block">
-                <a href="#" class="breadcrumb-link">Bosh sahifa </a>
+                <a href="{{ route('user.index') }}" class="breadcrumb-link">Bosh sahifa </a>
                 |
                 <a href="#" class="breadcrumb-link">Aloqa</a></div>
         </div>

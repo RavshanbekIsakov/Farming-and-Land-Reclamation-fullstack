@@ -22,8 +22,9 @@ Route::get('/references', [UserController::class, 'references'])->name('user.ref
 Route::get('/lab-mash', [UserController::class, 'lab_mash'])->name('user.labaratoriya_mashgulotlari');
 Route::get('/amaliy-mash', [UserController::class, 'amaliy_mash'])->name('user.amaliy_mashgulotlari');
 Route::get('/maruza-bolimlari', [UserController::class, 'maruza'])->name('user.maruza');
-Route::get('dehqonchilik-maruza', [UserController::class, 'deh_maruza'])->name('user.deh_maruza');
-Route::get('melioratsiya-maruza', [UserController::class, 'mel_maruza'])->name('user.mel_maruza');
+Route::get('/dehqonchilik-maruza', [UserController::class, 'deh_maruza'])->name('user.deh_maruza');
+Route::get('/melioratsiya-maruza', [UserController::class, 'mel_maruza'])->name('user.mel_maruza');
+Route::get('/presentation', [UserController::class, 'presentatsiya'])->name('user.presentations');
 
 Route::prefix('admin')->group(callback: function () {
     Route::view('/', 'admin.login')->name("admin.login");
@@ -45,7 +46,7 @@ Route::prefix('admin')->group(callback: function () {
 
         Route::get('/lectures', [LecturesController::class, 'lectures'])->name('admin.view.lectures');
         Route::post('add-lecture', [LecturesController::class, 'add_lectures'])->name('admin.add.lecture');
-        Route::delete('delete-lecture', [LecturesController::class, 'delete_lecture'])->name('admin.delete.lectures');
+        Route::delete('delete-lecture', [LecturesController::class, 'delete_lecture'])->name('admin.delete.lecture');
 
         Route::get('/quizzes', [QuizController::class, 'quizzes'])->name('admin.view.quizzes');
         Route::post('add-quiz', [QuizController::class, 'add_quiz'])->name('admin.add.quiz');
