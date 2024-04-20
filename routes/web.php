@@ -24,7 +24,9 @@ Route::get('/amaliy-mash', [UserController::class, 'amaliy_mash'])->name('user.a
 Route::get('/maruza-bolimlari', [UserController::class, 'maruza'])->name('user.maruza');
 Route::get('/dehqonchilik-maruza', [UserController::class, 'deh_maruza'])->name('user.deh_maruza');
 Route::get('/melioratsiya-maruza', [UserController::class, 'mel_maruza'])->name('user.mel_maruza');
+Route::get('/mustaqil-ish', [UserController::class, 'indep_work'])->name('user.indep_works');
 Route::get('/presentation', [UserController::class, 'presentatsiya'])->name('user.presentations');
+Route::get('/quiz-types', [UserController::class, 'quiz_types'])->name('user.quiz_types');
 
 Route::prefix('admin')->group(callback: function () {
     Route::view('/', 'admin.login')->name("admin.login");
@@ -51,6 +53,10 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('/quizzes', [QuizController::class, 'quizzes'])->name('admin.view.quizzes');
         Route::post('add-quiz', [QuizController::class, 'add_quiz'])->name('admin.add.quiz');
         Route::delete('delete-quiz', [QuizController::class, 'delete_quiz'])->name('admin.delete.question');
+
+        Route::get('/quiz', [QuizController::class, 'showQuiz'])->name('user.deh_quiz');
+        Route::post('/submit-answer', [QuizController::class, 'submitAnswer'])->name('user.submitAnswer');
+        Route::get('/quiz-finished', [QuizController::class, 'quizFinished'])->name('user.quizFinished');
 
         Route::get('/presentations', [PresentationController::class, 'presentations'])->name('admin.view.presentations');
         Route::post('add-pres', [PresentationController::class, 'add_pres'])->name('admin.add.pres');

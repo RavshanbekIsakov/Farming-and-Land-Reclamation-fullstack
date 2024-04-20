@@ -192,9 +192,9 @@
                         <a href="{{ route('user.amaliy_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Amaliy mashg'ulot</a>
                         <a href="{{ route('user.presentations') }}" class="dropdown-link w-dropdown-link">Taqdimotlar</a>
                         <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Labaratoriya mashg'ulotlari</a>
-                        <a href="/project" class="dropdown-link w-dropdown-link">Mustaqil ish</a>
+                        <a href="{{ route('user.indep_works') }}" class="dropdown-link w-dropdown-link">Mustaqil ish</a>
                         <a href="#" class="dropdown-link w-dropdown-link">Glossari</a>
-                        <a href="/team" class="dropdown-link w-dropdown-link">Testlar</a>
+                        <a href="{{ route('user.quiz_types') }}" class="dropdown-link w-dropdown-link">Testlar</a>
                         <a href="{{ route('user.references') }}" class="dropdown-link w-dropdown-link">Adabiyotlar</a>
                     </nav>
                 </div>

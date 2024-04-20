@@ -42,6 +42,12 @@ class UserController extends Controller
         return view('user.maruza');
     }
 
+    public function indep_work()
+    {
+        return view('user.indep_work');
+    }
+
+
     public function deh_maruza()
     {
         $user_deh_maruza = Lectures::where('lecture_type', 1)->get();
@@ -58,6 +64,11 @@ class UserController extends Controller
     {
         $user_presentation = Presentations::paginate(4);
         return view('user.prezentatsiyalar', ['presentation' => $user_presentation]);
+    }
+
+    public function quiz_types()
+    {
+        return view('user.quizzes_page');
     }
 
 }
