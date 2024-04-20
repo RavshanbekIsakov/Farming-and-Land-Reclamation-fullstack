@@ -55,11 +55,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="/services/organic-services" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.presentations') }}" class="service-image-link w-inline-block">
                                             <img alt="image" loading="lazy" src="images/presentation.png" sizes="(max-width: 479px) 94vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/presentation.png 500w, images/presentation.png 657w" class="service-image">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="/services/organic-services" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.presentations') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Taqdimontlar</h3>
                                             </a>
                                         </div>
@@ -73,11 +73,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="/services/agriculture-leader" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.amaliy_mashgulotlari') }}" class="service-image-link w-inline-block">
                                             <img alt="image" src="images/6538bee66b3dce952f12d4e7_5.png" sizes="(max-width: 479px) 100vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/6538bee66b3dce952f12d4e7_5.png 500w, images/6538bee66b3dce952f12d4e7_5.png 657w" class="service-image three">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="/services/agriculture-leader" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.amaliy_mashgulotlari') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Amaliy mashg'ulot</h3>
                                             </a>
                                         </div>
@@ -91,11 +91,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="/services/retail-agriculture" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="service-image-link w-inline-block">
                                             <img alt="image"  src="images/laboratory.jpg" sizes="(max-width: 479px) 100vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/laboratory.jpg 500w, images/laboratory.jpg 657w" class="service-image one">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="/services/retail-agriculture" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Labaratoriya mashg'ulotlari</h3>
                                             </a>
                                         </div>
@@ -109,11 +109,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="/services/wholesale-trade" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.glossary') }}" class="service-image-link w-inline-block">
                                             <img alt="image" loading="lazy" src="images/glossary.jpg" sizes="(max-width: 479px) 100vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/glossary.jpg 500w, images/glossary.jpg 657w" class="service-image">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="/services/wholesale-trade" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.glossary') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Glossari</h3>
                                             </a>
                                         </div>
@@ -127,11 +127,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="tests_part.html" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.quiz_types') }}" class="service-image-link w-inline-block">
                                             <img alt="image"  src="images/exam.png" sizes="(max-width: 479px) 94vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/exam.png 500w, images/exam.png 657w" class="service-image three">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="tests_part.html" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.quiz_types') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Test</h3>
                                             </a>
                                         </div>

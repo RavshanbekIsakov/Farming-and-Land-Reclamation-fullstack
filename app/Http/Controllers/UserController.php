@@ -46,6 +46,10 @@ class UserController extends Controller
     {
         return view('user.indep_work');
     }
+    public function glossary()
+    {
+        return view('user.glossary');
+    }
 
 
     public function deh_maruza()

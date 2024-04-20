@@ -75,60 +75,6 @@ class QuizController extends Controller
         return redirect()->back()->with('delete',1);
     }
 
-    public function showQuiz(Request $request)
-    {
-        $quizzes = Quizzes::inRandomOrder()->get();
-
-        // Calculate remaining time
-        $elapsedTime = now()->diffInMinutes($request->session()->get('start_time'));
-        $remainingTime = 40 - $elapsedTime;
-
-        // Check if the timer has expired
-        if ($remainingTime <= 0) {
-            return redirect()->route('quizFinished');
-        }
-    }
-
-
-//    public function submitAnswer(Request $request)
-//    {
-//        // Retrieve quiz ID and selected answer from the request
-//        $quizId = $request->input('quiz_id');
-//        $selectedAnswer = $request->input('answer');
-//
-//        // Fetch the quiz from the database
-//        $quiz = Quizzes::find($quizId);
-//
-//        // Determine if the answer is correct
-//        $isCorrect = ($quiz->option_correct === $selectedAnswer);
-//
-//        // Store the quiz result and user answer in the session
-//        $request->session()->put('quiz_results.' . $quizId, [
-//            'isCorrect' => $isCorrect,
-//            'selectedAnswer' => $selectedAnswer,
-//            'correctAnswer' => $quiz->option_correct
-//        ]);
-//
-//        // Track the user's score in the session
-//        if ($isCorrect) {
-//            $request->session()->increment('correct_answers', 1);
-//        } else {
-//            $request->session()->increment('incorrect_answers', 1);
-//        }
-//
-//        // Redirect to the next quiz
-//        return redirect()->route('showQuiz');
-//    }
-
-//    public function quizFinished()
-//    {
-//        // Render the quiz finished view
-//        return view('quiz_finished', [
-//            'correctAnswers' => session('correct_answers', 0),
-//            'incorrectAnswers' => session('incorrect_answers', 0)
-//        ]);
-//    }
-
 
 
 }
