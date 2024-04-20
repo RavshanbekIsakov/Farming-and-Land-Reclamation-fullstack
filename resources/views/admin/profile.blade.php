@@ -31,11 +31,11 @@
                             <h5 class="h6 card-title">About</h5>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-1">
-                                    <i class="align-middle me-1" data-feather="user"></i>F.I.SH: <a href="#">Ravshanbek Isakov</a>
+                                    <i class="align-middle me-1" data-feather="user"></i>F.I.SH: <a href="#">{{ session('fullname') }}</a>
                                 </li>
                                 <li class="mb-1">
-                                    <i class="align-middle me-1" data-feather="briefcase"></i>Ish joyi: <a href="#">GoldApps LLC</a></li>
-                                <li class="mb-1"><i class="align-middle me-1" data-feather="phone"></i>Telefon: <a href="#">+998 99 566 71 55</a></li>
+                                    <i class="align-middle me-1" data-feather="briefcase"></i>Ish joyi: <a href="#">TDAU</a></li>
+                                <li class="mb-1"><i class="align-middle me-1" data-feather="phone"></i>Telefon: <a href="#">+998 90 138 44 33</a></li>
                             </ul>
                         </div>
                         <hr class="my-0">
