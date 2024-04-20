@@ -101,7 +101,12 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">To'g'ri javob<span class="text-danger">*</span></label>
-                                    <input name="option_correct" required type="text" class="form-control" placeholder="">
+                                    <select required name="option_correct" class="form-control">
+                                        <option value="a">A javob</option>
+                                        <option value="b">B javob</option>
+                                        <option value="c">C javob</option>
+                                        <option value="d">D javob</option>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Rasm</label>

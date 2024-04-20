@@ -21,7 +21,7 @@ class QuizController extends Controller
             'option_b' => 'required|string',
             'option_c' => 'required|string',
             'option_d' => 'required|string',
-            'option_correct' => 'required|string',
+            'option_correct' => 'required|in:a,b,c,d',
             'quiz_type' => 'required|in:1,2'
         ]);
         if ($request->hasFile('image')){
@@ -34,6 +34,19 @@ class QuizController extends Controller
             $photo_name = "no_photo";
         }
 
+        if ($request->option_correct == 'a') {
+            $correct_ans = $request->option_a;
+        }
+        elseif ($request->option_correct == 'b') {
+            $correct_ans = $request->option_b;
+        }
+        elseif ($request->option_correct == 'c') {
+            $correct_ans = $request->option_c;
+        }
+        elseif ($request->option_correct == 'd') {
+            $correct_ans = $request->option_d;
+        }
+
         $n_quiz = new Quizzes();
         $n_quiz->questions = $request->question;
         $n_quiz->question_photo = $photo_name;
@@ -41,7 +54,7 @@ class QuizController extends Controller
         $n_quiz->option_b = $request->option_b;
         $n_quiz->option_c = $request->option_c;
         $n_quiz->option_d = $request->option_d;
-        $n_quiz->option_correct = $request->option_correct;
+        $n_quiz->option_correct = $correct_ans;
         $n_quiz->question_type = $request->quiz_type;
         $n_quiz->save();
         if($n_quiz->id){
