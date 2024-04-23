@@ -28,7 +28,8 @@ Route::get('/mustaqil-ish', [UserController::class, 'indep_work'])->name('user.i
 Route::get('/glossari', [UserController::class, 'glossary'])->name('user.glossary');
 Route::get('/presentation', [UserController::class, 'presentatsiya'])->name('user.presentations');
 Route::get('/quiz-types', [UserController::class, 'quiz_types'])->name('user.quiz_types');
-Route::get('/quiz', [UserController::class, 'quiz'])->name('user.quiz');
+Route::get('/dehqonchilik-quiz', [QuizController::class, 'dehqonchilikQuiz'])->name('dehqonchilik.quiz');
+Route::get('/melioratsiya-quiz', [QuizController::class, 'melioratsiyaQuiz'])->name('melioratsiya.quiz');
 
 Route::prefix('admin')->group(callback: function () {
     Route::view('/', 'admin.login')->name("admin.login");

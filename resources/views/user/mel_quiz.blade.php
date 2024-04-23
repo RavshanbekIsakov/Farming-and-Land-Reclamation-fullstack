@@ -1,6 +1,7 @@
 @extends('user.header_footer2')
 
 @section('main')
+
     <section class="section breadcrumb-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="breadcrumb-info-block">
@@ -12,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Dehqonchilik Quiz</h1>
+                <h1>Melioratsiya Quiz</h1>
                 <div id="quiz-container">
                     @foreach ($quizzes as $quiz)
                         <div class="quiz-question">
@@ -35,3 +36,4 @@
 
     <script src="{{ asset('js/quiz.js') }}"></script>
 @endsection
+

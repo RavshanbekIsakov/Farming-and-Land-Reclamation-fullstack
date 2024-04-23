@@ -6,6 +6,7 @@ use App\Models\Articles;
 use App\Models\Lectures;
 use App\Models\PracticalTrainings;
 use App\Models\Presentations;
+use App\Models\Quizzes;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -78,6 +79,26 @@ class UserController extends Controller
     public function quiz()
     {
         return view('user.test');
+    }
+
+    public function dehqonchilikQuiz()
+    {
+        $quizzes = Quizzes::where('question_type', 'Dehqonchilik')
+            ->inRandomOrder()
+            ->limit(50)
+            ->get();
+
+        return view('deh_quiz', compact('quizzes'));
+    }
+
+    public function melioratsiyaQuiz()
+    {
+        $quizzes = Quizzes::where('question_type', 'Melioratsiya')
+            ->inRandomOrder()
+            ->limit(50)
+            ->get();
+
+        return view('melioratsiya_quiz', compact('quizzes'));
     }
 
 }
