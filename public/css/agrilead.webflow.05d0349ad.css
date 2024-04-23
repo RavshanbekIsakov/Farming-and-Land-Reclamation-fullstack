@@ -3033,6 +3033,9 @@ blockquote {
     background-color: #d6d6e5;
 }
 
+/*.quiz-question {*/
+/*    margin-top: 20px;*/
+/*}*/
 .small_test label span:before {
     display: -webkit-box;
     display: -ms-flexbox;

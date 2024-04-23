@@ -102,34 +102,28 @@
             <div class="footer-block center">
                 <ul role="list" class="footer-list">
                     <li class="footer-list-item">
-                        <a href="/" aria-current="page" class="footer-link w--current">Bosh sahifa</a>
+                        <a href="{{ route('user.index') }}" aria-current="page" class="footer-link w--current">Bosh sahifa</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="#about-us" class="footer-link">Biz haqimizda</a>
-                    </li>
-                    <li class="footer-list-item">
-                        <a href="/contact-us" class="footer-link">Biz bilan bog'laning</a>
-                    </li>
-                    <li class="footer-list-item">
-                        <a href="/brand-guidelines/style-guide" class="footer-link">Test ishlash</a>
+                        <a href="{{ route('user.quiz_types') }}" class="footer-link">Test ishlash</a>
                     </li>
                     <li class="footer-list-item">
                         <a href="{{ route('user.maruza') }}" class="footer-link">Ma'ruza</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="/brand-guidelines/changelog" class="footer-link">Amaliy mashg'ulot</a>
+                        <a href="{{ route('user.amaliy_mashgulotlari') }}" class="footer-link">Amaliy mashg'ulot</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="/brand-guidelines/changelog" class="footer-link">Taqdimotlar</a>
+                        <a href="{{ route('user.presentations') }}" class="footer-link">Taqdimotlar</a>
                     </li>
                     <li class="footer-list-item">
                         <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="footer-link">Labaratoriya mashg'ulotlari</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="/brand-guidelines/changelog" class="footer-link">Glossari</a>
+                        <a href="{{ route('user.glossary') }}" class="footer-link">Glossari</a>
                     </li>
                     <li class="footer-list-item">
-                        <a href="/brand-guidelines/changelog" class="footer-link">Adabiyotlar</a>
+                        <a href="{{ route('user.references') }}" class="footer-link">Adabiyotlar</a>
                     </li>
                 </ul>
                 <div class="footer-icon-block">

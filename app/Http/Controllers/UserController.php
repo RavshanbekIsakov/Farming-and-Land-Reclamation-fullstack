@@ -75,4 +75,9 @@ class UserController extends Controller
         return view('user.quizzes_page');
     }
 
+    public function quiz()
+    {
+        return view('user.test');
+    }
+
 }
