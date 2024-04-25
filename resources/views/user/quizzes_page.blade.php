@@ -16,7 +16,7 @@
                     <div role="listitem" class="blog-collection-item w-dyn-item">
                         <div class="blog-single-main-block">
                             <div id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb48-39340b82" class="blog-info">
-                                <a href="{{ route('user.deh_quiz') }}" class="blog-title-link w-inline-block">
+                                <a href="{{ route('dehqonchilik_quiz') }}" class="blog-title-link w-inline-block">
                                     <h3 class="blog-single-title">Dehqonchilik</h3>
                                 </a>
                             </div>

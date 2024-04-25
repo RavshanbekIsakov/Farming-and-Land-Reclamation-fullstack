@@ -26,6 +26,7 @@ class UserController extends Controller
         return view('user.references');
     }
 
+
     public function lab_mash()
     {
         $user_lab_books = Articles::paginate(4);
@@ -81,24 +82,9 @@ class UserController extends Controller
         return view('user.test');
     }
 
-    public function dehqonchilikQuiz()
-    {
-        $quizzes = Quizzes::where('question_type', 'Dehqonchilik')
-            ->inRandomOrder()
-            ->limit(50)
-            ->get();
 
-        return view('deh_quiz', compact('quizzes'));
-    }
 
-    public function melioratsiyaQuiz()
-    {
-        $quizzes = Quizzes::where('question_type', 'Melioratsiya')
-            ->inRandomOrder()
-            ->limit(50)
-            ->get();
 
-        return view('melioratsiya_quiz', compact('quizzes'));
-    }
+
 
 }

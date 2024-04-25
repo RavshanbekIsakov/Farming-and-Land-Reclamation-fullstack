@@ -15,7 +15,7 @@ class QuizController extends Controller
 
     public function add_quiz(Request $request){
         $request->validate([
-            'image' => 'required|image|max:2048',
+            'image' => 'image|max:2048',
             'question' => 'required|string',
             'option_a' => 'required|string',
             'option_b' => 'required|string',
@@ -75,6 +75,66 @@ class QuizController extends Controller
         return redirect()->back()->with('delete',1);
     }
 
+    public function dehqonchilikQuiz()
+    {
+        $quizzes = Quizzes::where('question_type', '1')
+            ->inRandomOrder()
+            ->limit(20)
+            ->get();
+
+        return view('user.deh_quiz', ['tests' => $quizzes]);
+    }
+
+    public function melioratsiyaQuiz()
+    {
+        $quizzes = Quizzes::where('question_type', 'Melioratsiya')
+            ->inRandomOrder()
+            ->limit(2)
+            ->get();
+
+        return view('melioratsiya_quiz', compact('quizzes'));
+    }
+
+    public function showQuiz($id)
+    {
+        $quiz_questions = Quizzes::get();
+        return $quiz_questions;
+        // Retrieve the quiz from the database based on the provided ID
+//        $quiz = Quizzes::findOrFail($id);
+//
+//        // Return the view to display the quiz details
+//        return view('quiz.show', compact('quiz'));
+    }
+
+    public function checkAnswer(Request $request)
+    {
+//        return $request;
+        $correct = 0;
+        $incorrect = 0;
+
+        for ($x = 1; $x <= 101; $x++) {
+            $front_name = "question$x";
+            $answer_name = "answer$x";
+//                return $answer_name;
+//            return $front_name;
+            if ($request->has($front_name)){
+                $question = Quizzes::where('id', $request->$front_name)->first();
+                if ($question->option_correct == $request->$answer_name){
+                    $correct++;
+                }
+                else{
+                    $incorrect++;
+                }
+            }
+        }
+        return redirect()->route('user.quiz_finished', ['correct' => $correct, 'incorrect' => $incorrect]);
+
+    }
+
+    public function quiz_finished(Request $request)
+    {
+        return view('user.quiz_finished',['correct' => $request->correct, 'incorrect' => $request->incorrect] );
+    }
 
 
 }
