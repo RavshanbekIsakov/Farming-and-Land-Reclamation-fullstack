@@ -70,7 +70,9 @@ class QuizController extends Controller
             'id' => 'required|numeric'
         ]);
         $quiz = Quizzes::find($request->id);
-        unlink('img/quizzes/'.$quiz->question_photo);
+        if ($quiz->question_photo != "no_photo") {
+            unlink('img/quizzes/'. $quiz->question_photo);
+        }
         Quizzes::where('id',$request->id)->delete();
         return redirect()->back()->with('delete',1);
     }
