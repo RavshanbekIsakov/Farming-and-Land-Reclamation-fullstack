@@ -12,7 +12,7 @@
     <div class="section service-section section-smaller">
         <div class="row">
             <div class="text-white">
-                <h1>Dehqonchilik Quiz</h1>
+                <h1>Dehqonchilik testi</h1>
                 <form method="POST" action="{{ route('user.quiz_check') }}">
                     @csrf
                     <div id="section-heading">

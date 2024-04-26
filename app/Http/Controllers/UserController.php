@@ -56,13 +56,13 @@ class UserController extends Controller
 
     public function deh_maruza()
     {
-        $user_deh_maruza = Lectures::where('lecture_type', 1)->get();
+        $user_deh_maruza = Lectures::where('lecture_type', 1)->paginate(4);
         return view('user.deh_maruza', ['deh_maruza' => $user_deh_maruza]);
     }
 
     public function mel_maruza()
     {
-        $user_mel_maruza = Lectures::where('lecture_type', 2)->get();
+        $user_mel_maruza = Lectures::where('lecture_type', 2)->paginate(4);
         return view('user.mel_maruza', ['mel_maruza' => $user_mel_maruza]);
     }
 
@@ -81,10 +81,5 @@ class UserController extends Controller
     {
         return view('user.test');
     }
-
-
-
-
-
 
 }

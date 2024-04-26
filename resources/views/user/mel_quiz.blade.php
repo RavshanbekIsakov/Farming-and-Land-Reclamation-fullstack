@@ -1,7 +1,6 @@
 @extends('user.header_footer2')
 
 @section('main')
-
     <section class="section breadcrumb-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="breadcrumb-info-block">
@@ -10,30 +9,37 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="section service-section section-smaller">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Melioratsiya Quiz</h1>
-                <div id="quiz-container">
-                    @foreach ($quizzes as $quiz)
-                        <div class="quiz-question">
-                            <h3>{{ $quiz->questions }}</h3>
-                            <img src="{{ $quiz->question_photo ? asset('storage/' . $quiz->question_photo) : asset('img/no_photo.jpg') }}" alt="Question Image">
-                            <div class="options">
-                                <label><input type="radio" name="quiz-option" value="A">{{ $quiz->option_a }}</label><br>
-                                <label><input type="radio" name="quiz-option" value="B">{{ $quiz->option_b }}</label><br>
-                                <label><input type="radio" name="quiz-option" value="C">{{ $quiz->option_c }}</label><br>
-                                <label><input type="radio" name="quiz-option" value="D">{{ $quiz->option_d }}</label><br>
+            <div class="text-white">
+                <h1>Melioratsiya testi</h1>
+                <form method="POST" action="{{ route('user.quiz_check') }}">
+                    @csrf
+                    <div id="section-heading">
+                        @foreach ($tests as $count => $item)
+                            <div class="quiz-question text-center" style="margin-bottom: 20px">
+                                <h3>{{ $item->questions }}</h3>
+                                <input type="hidden" name="question{{ $count+1 }}" value="{{ $item->id }}">
+                                @if($item->question_photo !== 'no_photo')
+                                    <img src="{{ asset('img/quizzes/' . $item->question_photo) }}" alt="Question Image">
+                                @endif
+                                <div class="section-heading-span" style="font-size: 20px">
+                                    <label style="cursor: pointer"><input type="radio" name="answer{{ $count+1 }}" value="{{ $item->option_a }}">{{ $item->option_a }}</label><br>
+                                    <label style="cursor: pointer"><input type="radio" name="answer{{ $count+1 }}" value="{{ $item->option_b }}">{{ $item->option_b }}</label><br>
+                                    <label style="cursor: pointer"><input type="radio" name="answer{{ $count+1 }}" value="{{ $item->option_c }}">{{ $item->option_c }}</label><br>
+                                    <label style="cursor: pointer"><input type="radio" name="answer{{ $count+1 }}" value="{{ $item->option_d }}">{{ $item->option_d }}</label><br>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
-                </div>
-                <button id="submit-btn" onclick="submitQuiz()">Submit</button>
-                <div id="timer"></div>
+                        @endforeach
+                    </div>
+                    <div style="text-align: center; padding-bottom: 70px; margin-top: 20px">
+                        <button class="button"  id="submit-btn" type="submit" name="s1" value="submit">Submit</button>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
 
     <script src="{{ asset('js/quiz.js') }}"></script>
 @endsection
-

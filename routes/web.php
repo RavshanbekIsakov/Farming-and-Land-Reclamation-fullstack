@@ -29,8 +29,8 @@ Route::get('/glossari', [UserController::class, 'glossary'])->name('user.glossar
 Route::get('/presentation', [UserController::class, 'presentatsiya'])->name('user.presentations');
 Route::get('/quiz-types', [UserController::class, 'quiz_types'])->name('user.quiz_types');
 Route::get('/dehqonchilik-quiz', [QuizController::class, 'dehqonchilikQuiz'])->name('dehqonchilik_quiz');
-Route::get('/melioratsiya-quiz', [QuizController::class, 'melioratsiyaQuiz'])->name('melioratsiya.quiz');
-Route::get('/quiz/{id}', [QuizController::class, 'showQuiz'])->name('quiz.show');
+Route::get('/melioratsiya-quiz', [QuizController::class, 'melioratsiyaQuiz'])->name('melioratsiya_quiz');
+//Route::get('/quiz/{id}', [QuizController::class, 'showQuiz'])->name('quiz.show');
 Route::post('/quiz-check', [QuizController::class, 'checkAnswer'])->name('user.quiz_check');
 Route::get('/quiz-finished', [QuizController::class, 'quiz_finished'])->name('user.quiz_finished');
 

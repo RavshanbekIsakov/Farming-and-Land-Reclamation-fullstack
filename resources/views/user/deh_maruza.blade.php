@@ -7,7 +7,6 @@
             <div class="breadcrumb-info-block">
                 <a href="{{ route('user.index') }}" class="breadcrumb-link">Bosh sahifa </a>|
                 <a href="#" class="breadcrumb-link">Dehqonchilik maruzalari</a></div>
-                {{ $score }}
         </div>
     </section>
     <section class="section">
@@ -29,8 +28,8 @@
                         </div>
                     @endforeach
                 </div>
+                {{ $deh_maruza->links() }}
             </div>
-           {{ $deh_maruza->links() }}
         </div>
     </section>
 

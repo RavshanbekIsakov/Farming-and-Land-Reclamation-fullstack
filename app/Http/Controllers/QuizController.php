@@ -81,7 +81,7 @@ class QuizController extends Controller
     {
         $quizzes = Quizzes::where('question_type', '1')
             ->inRandomOrder()
-            ->limit(20)
+            ->limit(50)
             ->get();
 
         return view('user.deh_quiz', ['tests' => $quizzes]);
@@ -89,23 +89,12 @@ class QuizController extends Controller
 
     public function melioratsiyaQuiz()
     {
-        $quizzes = Quizzes::where('question_type', 'Melioratsiya')
+        $quizzes = Quizzes::where('question_type', '2')
             ->inRandomOrder()
-            ->limit(2)
+            ->limit(50)
             ->get();
 
-        return view('melioratsiya_quiz', compact('quizzes'));
-    }
-
-    public function showQuiz($id)
-    {
-        $quiz_questions = Quizzes::get();
-        return $quiz_questions;
-        // Retrieve the quiz from the database based on the provided ID
-//        $quiz = Quizzes::findOrFail($id);
-//
-//        // Return the view to display the quiz details
-//        return view('quiz.show', compact('quiz'));
+        return view('user.mel_quiz', ['tests' => $quizzes]);
     }
 
     public function checkAnswer(Request $request)

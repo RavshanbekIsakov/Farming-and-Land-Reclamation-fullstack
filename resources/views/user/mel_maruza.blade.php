@@ -29,7 +29,7 @@
                     @endforeach
                 </div>
             </div>
-{{--            {{ $mel_maruza->links() }}--}}
+            {{ $mel_maruza->links() }}
         </div>
     </section>
 
