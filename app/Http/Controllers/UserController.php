@@ -82,4 +82,9 @@ class UserController extends Controller
         return view('user.test');
     }
 
+    public function video_lessons()
+    {
+        return view('user.video_lessons');
+    }
+
 }

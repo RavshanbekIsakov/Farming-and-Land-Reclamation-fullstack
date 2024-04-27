@@ -126,6 +126,4 @@ class QuizController extends Controller
     {
         return view('user.quiz_finished',['correct' => $request->correct, 'incorrect' => $request->incorrect] );
     }
-
-
 }

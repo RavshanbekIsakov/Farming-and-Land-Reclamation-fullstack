@@ -196,6 +196,7 @@
                         <a href="{{ route('user.glossary') }}" class="dropdown-link w-dropdown-link">Glossari</a>
                         <a href="{{ route('user.quiz_types') }}" class="dropdown-link w-dropdown-link">Testlar</a>
                         <a href="{{ route('user.references') }}" class="dropdown-link w-dropdown-link">Adabiyotlar</a>
+                        <a href="{{ route('user.video_lessons') }}" class="dropdown-link w-dropdown-link">Video darsliklar</a>
                     </nav>
                 </div>
                 <a href="{{ route('user.contacts') }}" class="nav-link w-nav-link">Aloqa</a>

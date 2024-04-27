@@ -8,6 +8,7 @@ body {
   margin: 0;
 }
 
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -2954,6 +2955,10 @@ blockquote {
 
 
 /*----------------------------------------------------*/
+.video-container {
+    justify-content: space-around;
+}
+
 
 .test{
     width: 90%;
@@ -4947,6 +4952,7 @@ h1 {
   .text-input[data-wf-focus-visible] {
     border-width: 1px;
   }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -5159,6 +5165,24 @@ h1 {
   .section-heading {
     font-size: 54px;
   }
+
+  .video-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+    .video-container iframe {
+        width: 50%;
+        float: left;
+        margin-right: 10px;
+    }
+}
 
   .project-right-arrow {
     display: none;
