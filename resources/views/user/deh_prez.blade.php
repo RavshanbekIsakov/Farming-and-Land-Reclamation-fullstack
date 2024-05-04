@@ -13,7 +13,7 @@
         <div class="w-layout-blockcontainer container w-container">
             <div data-w-id="12a34fd4-70dc-e61d-9cde-bbb0997ddb3f" class="blog-collection-list-wrapper w-dyn-list">
                 <div role="list" class="blog-single-collection-list w-dyn-items">
-                    @foreach($presentation as $item)
+                    @foreach($deh_prez as $item)
                         <div role="listitem" class="blog-collection-item w-dyn-item">
                             <div class="blog-single-main-block">
                                 <a id="w-node-_12a34fd4-70dc-e61d-9cde-bbb0997ddb46-39340b82" href="#" style="border: 1px solid black" class="blog-image-link w-inline-block">
@@ -29,7 +29,7 @@
                     @endforeach
                 </div>
             </div>
-            {{ $presentation->links() }}
+            {{ $deh_prez->links() }}
         </div>
     </section>
 

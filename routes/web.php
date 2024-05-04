@@ -26,7 +26,9 @@ Route::get('/dehqonchilik-maruza', [UserController::class, 'deh_maruza'])->name(
 Route::get('/melioratsiya-maruza', [UserController::class, 'mel_maruza'])->name('user.mel_maruza');
 Route::get('/mustaqil-ish', [UserController::class, 'indep_work'])->name('user.indep_works');
 Route::get('/glossari', [UserController::class, 'glossary'])->name('user.glossary');
-Route::get('/presentation', [UserController::class, 'presentatsiya'])->name('user.presentations');
+Route::get('/presentations', [UserController::class, 'prez_types'])->name('user.prez_turlari');
+Route::get('/dehqonchilik-prez', [UserController::class, 'deh_prez'])->name('user.deh_prez');
+Route::get('/melioratsiya-prez', [UserController::class, 'mel_prez'])->name('user.mel_prez');
 Route::get('/quiz-types', [UserController::class, 'quiz_types'])->name('user.quiz_types');
 Route::get('/dehqonchilik-quiz', [QuizController::class, 'dehqonchilikQuiz'])->name('dehqonchilik_quiz');
 Route::get('/melioratsiya-quiz', [QuizController::class, 'melioratsiyaQuiz'])->name('melioratsiya_quiz');

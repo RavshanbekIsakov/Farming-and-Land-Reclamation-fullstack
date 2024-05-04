@@ -55,11 +55,11 @@
                             <div role="list" class="service-collection-list w-dyn-items">
                                 <div role="listitem" class="service-collection-item w-dyn-item">
                                     <div class="service-main-block">
-                                        <a href="{{ route('user.presentations') }}" class="service-image-link w-inline-block">
+                                        <a href="{{ route('user.prez_turlari') }}" class="service-image-link w-inline-block">
                                             <img alt="image" loading="lazy" src="images/presentation.png" sizes="(max-width: 479px) 94vw, (max-width: 767px) 260px, (max-width: 991px) 360px, 436px" srcset="images/presentation.png 500w, images/presentation.png 657w" class="service-image">
                                         </a>
                                         <div class="service-info-block">
-                                            <a href="{{ route('user.presentations') }}" class="service-heading-link w-inline-block">
+                                            <a href="{{ route('user.prez_turlari') }}" class="service-heading-link w-inline-block">
                                                 <h3 class="service-heading">Taqdimontlar</h3>
                                             </a>
                                         </div>
@@ -200,7 +200,7 @@
                                 </a>
                             </div>
                             <a href="/team/johane-redsa" class="team-image-link w-inline-block">
-                                <img alt="image" loading="lazy" src="images/6539ef35fe903bed35e2f846_5.png" sizes="(max-width: 479px) 90vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 98vw, 1370px" srcset="images/6539ef35fe903bed35e2f846_5-p-500.png 500w, images/6539ef35fe903bed35e2f846_5.png 657w" class="team-image">
+                                <img alt="image" loading="lazy" src="images/Usmon.png" sizes="(max-width: 479px) 90vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 98vw, 1370px" srcset="images/Usmon.png 500w, images/Usmon.png 657w" class="team-image">
                             </a>
                             <div class="team-info-block">
                                 <a href="/team/johane-redsa" class="team-title-link w-inline-block">
@@ -221,11 +221,11 @@
                                     <img width="50" height="50" src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone--v1"/>
                                 </a>
                             </div>
-                            <a href="/team/johane-redsa" class="team-image-link w-inline-block">
-                                <img alt="image" loading="lazy" src="images/6539ef35fe903bed35e2f846_5.png" sizes="(max-width: 479px) 90vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 98vw, 1370px" srcset="images/6539ef35fe903bed35e2f846_5-p-500.png 500w, images/6539ef35fe903bed35e2f846_5.png 657w" class="team-image">
+                            <a href="#" class="team-image-link w-inline-block">
+                                <img alt="image" loading="lazy" src="images/Shavkat2.png" sizes="(max-width: 479px) 90vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 98vw, 1370px" srcset="images/Shavkat2.png 500w, images/Shavkat2.png 657w" class="team-image">
                             </a>
                             <div class="team-info-block">
-                                <a href="/team/johane-redsa" class="team-title-link w-inline-block">
+                                <a href="#" class="team-title-link w-inline-block">
                                     <h3 class="team-title">Axmurzayev Shavkat Isakovich</h3>
                                 </a>
                                 <div class="team-position">Qishloq xo‘jaligi fanlari bo‘yicha falsafa doktori (PhD), dotsent</div>

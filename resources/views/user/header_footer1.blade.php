@@ -190,7 +190,7 @@
                     <nav class="dropdown-white-list w-dropdown-list">
                         <a href="{{ route('user.maruza') }}" class="dropdown-link w-dropdown-link">Ma'ruza</a>
                         <a href="{{ route('user.amaliy_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Amaliy mashg'ulot</a>
-                        <a href="{{ route('user.presentations') }}" class="dropdown-link w-dropdown-link">Taqdimotlar</a>
+                        <a href="{{ route('user.prez_turlari') }}" class="dropdown-link w-dropdown-link">Taqdimotlar</a>
                         <a href="{{ route('user.labaratoriya_mashgulotlari') }}" class="dropdown-link w-dropdown-link">Labaratoriya mashg'ulotlari</a>
                         <a href="{{ route('user.indep_works') }}" class="dropdown-link w-dropdown-link">Mustaqil ish</a>
                         <a href="{{ route('user.glossary') }}" class="dropdown-link w-dropdown-link">Glossari</a>

@@ -68,18 +68,18 @@ class UserController extends Controller
 
     public function prez_types()
     {
-        return view('user.prez_types');
+        return view('user.prez_turlari');
     }
 
     public function deh_prez()
     {
-        $user_presentation = Presentations::where('pres_type', 1)paginate(4);
+        $user_presentation = Presentations::where('pres_type', 1)->paginate(4);
         return view('user.deh_prez', ['deh_prez' => $user_presentation]);
     }
 
     public function mel_prez()
     {
-        $user_presentation = Presentations::where('pres_type', 2)paginate(4);
+        $user_presentation = Presentations::where('pres_type', 2)->paginate(4);
         return view('user.mel_prez', ['mel_prez' => $user_presentation]);
     }
 
