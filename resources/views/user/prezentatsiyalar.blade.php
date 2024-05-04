@@ -6,7 +6,7 @@
         <div class="w-layout-blockcontainer container w-container">
             <div class="breadcrumb-info-block">
                 <a href="{{ route('user.index') }}" class="breadcrumb-link">Bosh sahifa </a>|
-                <a href="#" class="breadcrumb-link">Prezentatsiyalar</a></div>
+                <a href="#" class="breadcrumb-link">Dehqonchilik prezentatsiyalari</a></div>
         </div>
     </section>
     <section class="section">

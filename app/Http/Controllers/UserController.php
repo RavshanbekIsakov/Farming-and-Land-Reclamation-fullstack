@@ -66,10 +66,21 @@ class UserController extends Controller
         return view('user.mel_maruza', ['mel_maruza' => $user_mel_maruza]);
     }
 
-    public function presentatsiya()
+    public function prez_types()
     {
-        $user_presentation = Presentations::paginate(4);
-        return view('user.prezentatsiyalar', ['presentation' => $user_presentation]);
+        return view('user.prez_types');
+    }
+
+    public function deh_prez()
+    {
+        $user_presentation = Presentations::where('pres_type', 1)paginate(4);
+        return view('user.deh_prez', ['deh_prez' => $user_presentation]);
+    }
+
+    public function mel_prez()
+    {
+        $user_presentation = Presentations::where('pres_type', 2)paginate(4);
+        return view('user.mel_prez', ['mel_prez' => $user_presentation]);
     }
 
     public function quiz_types()
